@@ -1,0 +1,376 @@
+{
+    "slides": [
+        {
+            "slide_number": 1,
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "Fine-tuning a \u000bLarge Language Model",
+                    "position": {
+                        "left": 1524000,
+                        "top": 1122363
+                    }
+                },
+                {
+                    "type": "text",
+                    "content": "Requirements, Costs, and ROI",
+                    "position": {
+                        "left": 1524000,
+                        "top": 3602038
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 2,
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "Fine-Tuning",
+                    "position": {
+                        "left": 630936,
+                        "top": 639520
+                    }
+                },
+                {
+                    "type": "text",
+                    "content": "Definition: Process of adapting a pre-trained LLM to a specific task or domain by continuing its training on a smaller, task-specific dataset.",
+                    "position": {
+                        "left": 630936,
+                        "top": 2807208
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 3,
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "Fine-Tuning Benefit",
+                    "position": {
+                        "left": 838200,
+                        "top": 365125
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 4,
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "Fine-Tuning Drawback",
+                    "position": {
+                        "left": 838200,
+                        "top": 365125
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 5,
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "Fine-Tuning Steps",
+                    "position": {
+                        "left": 640080,
+                        "top": 329184
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 6,
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "Requirement for Fine-Tuning",
+                    "position": {
+                        "left": 630936,
+                        "top": 502920
+                    }
+                },
+                {
+                    "type": "text",
+                    "content": "Data\nHigh-quality, task-specific dataset. \nRequired re-format into Training Samples with special token.",
+                    "position": {
+                        "left": 4654295,
+                        "top": 502920
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 7,
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "Requirement for Fine-Tuning",
+                    "position": {
+                        "left": 841248,
+                        "top": 548640
+                    }
+                },
+                {
+                    "type": "text",
+                    "content": "Data\nAdequate volume of data for training and validation: minimums of 2000 – 5000 examples sample for effective fine-tuning.\nIf Fine-Tuning for domain-specific application, required at least 10 000 of examples necessary to achieve good performance. [1] [2]\n\nThere are technique to gain more datasource.\nSynthetic data source << unreliable for enterprise\nFew-Shot learning << Heavily influence by the capability of the model. Required > 50B parameter model.",
+                    "position": {
+                        "left": 5126418,
+                        "top": 552091
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 8,
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "Requirement for Fine-Tuning",
+                    "position": {
+                        "left": 841248,
+                        "top": 548640
+                    }
+                },
+                {
+                    "type": "text",
+                    "content": "Training Compute Resources\nPowerful GPUs/TPUs (NO CPU) 20 – more GPU memory for training.\nHigh EBS bandwidth > 5 for data input (ETL).\nNVIDIA H100, NVIDIA A100, …\nSufficient memory for evaluation, checkpoint\n\nAfter training Compute Resources\nGPUs/TPU for hosting the model. Based on model, 16 – more for inference.\nPowerful bandwidth from inference. \n> 9 for better connections with multiple users.\nSufficient Memory and Storage, \nMemory for inferences, ...\nModel weight and parameters\nTraining Dataset,...",
+                    "position": {
+                        "left": 5126418,
+                        "top": 718168
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 9,
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "Requirement for Fine-Tuning",
+                    "position": {
+                        "left": 838200,
+                        "top": 365125
+                    }
+                },
+                {
+                    "type": "text",
+                    "content": "Expertise:\nKnowledge in machine learning and natural language processing\nExperience with LLM framework (e.g., Hugging Face Transformers, vLLM, llama.pp).\n\nSoftware:\nExpertise in Deep Learning framework (e.g., Pytorch, Tensorflow)\nKnow Data pre-processing and augmentation tools.",
+                    "position": {
+                        "left": 838200,
+                        "top": 1929384
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 10,
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "Cost and Time",
+                    "position": {
+                        "left": 841248,
+                        "top": 548640
+                    }
+                },
+                {
+                    "type": "text",
+                    "content": "Data Collection and Preparation\nCost of acquiring or creating a dataset: Based on employee's salary and time to pre-processing fine-tuning dataset.\nCollecting - EDA - Data annotation and labelling – Feature Extractions\n\n\nEstimate 3000$ - 5000$ for 2 Data Scientist for 2 weeks",
+                    "position": {
+                        "left": 5126418,
+                        "top": 552091
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 11,
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "Cost and Time",
+                    "position": {
+                        "left": 838200,
+                        "top": 365125
+                    }
+                },
+                {
+                    "type": "text",
+                    "content": "Training Compute Resources\nCloud Computing costs (cheapest options for training 7-8B parameters)",
+                    "position": {
+                        "left": 838200,
+                        "top": 1825625
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 12,
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "Cost and Time",
+                    "position": {
+                        "left": 838200,
+                        "top": 365125
+                    }
+                },
+                {
+                    "type": "text",
+                    "content": "Training Compute Resources\nCloud Computing costs (cheapest options for training 7-8B parameters)\n\n\nWith dataset about 5000 samples – 10000 samples\nWith QLora4 Technique takes 1.5 hours of training for 8 batches. >> reduce models sizes for faster training >> heavily reduce Accuracy.\nWith Lora Technique takes ~ 5 hours of training for 8 batches >> only train a small pieces of the model >> only for small custom task.\nWith Full Parameter Training  takes 7 hours of training for 8 batches.",
+                    "position": {
+                        "left": 838200,
+                        "top": 1825625
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 13,
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "Cost and Time",
+                    "position": {
+                        "left": 838200,
+                        "top": 365125
+                    }
+                },
+                {
+                    "type": "text",
+                    "content": "Training Compute Resources\nCloud Computing costs (cheapest options for training 7-8B parameters)\n\n\nWith dataset about 5000 samples – 10000 samples\nWith QLora4 Technique takes 1.5 * 2.03 = $3.045\nWith Lora Technique takes 5 * 2.03 = $10.15\nWith Full Parameter Training  takes 7 * 2.03 = $14.21\n\nThis is only for 1 takes, fine-tuning not always work the first time\nEstimate 10 times more iterative: \nQLora: $30.45\nLora: $101.5\nFull Parameter Training: $142.1",
+                    "position": {
+                        "left": 838200,
+                        "top": 1825625
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 14,
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "Cost and Time",
+                    "position": {
+                        "left": 838200,
+                        "top": 365125
+                    }
+                },
+                {
+                    "type": "text",
+                    "content": "Inference Compute Resources\nCloud Computing costs (cheapest options for training 7-8B parameters)",
+                    "position": {
+                        "left": 838200,
+                        "top": 1825625
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 15,
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "Cost and Time",
+                    "position": {
+                        "left": 838200,
+                        "top": 365125
+                    }
+                },
+                {
+                    "type": "text",
+                    "content": "Inference Compute Resource\u000b\u000b\u000b\u000b\u000b- Must always on, for accessibilty\n\n1 month = ~ 30 days ~ 720 hours ~ $720 for 1 instance\nThe prices above does not include scenario of scaling for multiple users and cost for AWS infrastructure for Storages, API.\n~ $1000 per month",
+                    "position": {
+                        "left": 838200,
+                        "top": 1825625
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 16,
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "Cost and Time",
+                    "position": {
+                        "left": 841248,
+                        "top": 548640
+                    }
+                },
+                {
+                    "type": "text",
+                    "content": "Expertise and Software:\nCurrently does not have sufficient workforces\nOnly 2 valid data scientist for that have expertise in LLM, training, Fine-tuning.\nOther projects with Client.\n\n=> More time consuming to train and deploy than usual.\n=> Delay more x1.5 ~ 1.7 times than usual. (salary, cloud cost, etc...)\n=> Expense cost * 1.5 ~ 1.7 times than usual.",
+                    "position": {
+                        "left": 5126418,
+                        "top": 552091
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 17,
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "Comparing with Current workflow",
+                    "position": {
+                        "left": 638881,
+                        "top": 417576
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 18,
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "Comparing with Current workflow",
+                    "position": {
+                        "left": 638881,
+                        "top": 417576
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 19,
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "Comparing with Current Workflow",
+                    "position": {
+                        "left": 838200,
+                        "top": 365125
+                    }
+                }
+            ]
+        },
+        {
+            "slide_number": 20,
+            "elements": [
+                {
+                    "type": "text",
+                    "content": "Comparing with Current Workflow",
+                    "position": {
+                        "left": 838200,
+                        "top": 365125
+                    }
+                },
+                {
+                    "type": "text",
+                    "content": "Compute the percentage difference\n\n=> Prompt-Engineering + RAG Approach is CHEAPER 46.57% than Fine-Tuning Approach.\u000b\u000b=> Prompt-Engineering + RAG Approach save 54.01% time than Fine-Tuning Approach\u000b\u000bFor effectiveness, it cannot be sure that Fine-Tuning Approach is much better than Prompt Engineering + RAG. It is depend on which, who, and what use cases.",
+                    "position": {
+                        "left": 922451,
+                        "top": 1411683
+                    }
+                }
+            ]
+        }
+    ]
+}
